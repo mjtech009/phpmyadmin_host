@@ -1,0 +1,8 @@
+version: "2.0"
+services:
+  phpmyadmin:
+    container_name: phpmyadmin_container
+    image: mjtech009/phpmyadmin_host:latest
+    restart: on-failure
+    env_file: rds.env
+    network_mode: "host"
